@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <input
+                    class="radio"
+                    type="radio"
+                    id="10"
+                    name="share"
+                    value="10"
+                />
+                <label for="10">10%</label>
+            </div>
+            <div class="box">
+                <input
+                    class="radio"
+                    type="radio"
+                    id="15"
+                    name="share"
+                    value="15"
+                />
+                <label for="15">15%</label>
+            </div>
+            <div class="box">
+                <input
+                    class="radio"
+                    type="radio"
+                    id="20"
+                    name="share"
+                    value="20"
+                />
+                <label for="20">20%</label>
+            </div>
+            <div class="box">
+                <input
+                    class="radio"
+                    type="radio"
+                    id="25"
+                    name="share"
+                    value="25"
+                />
+                <label for="25">25%</label>
+            </div>
+            <div class="box">
+                <input
+                    class="radio"
+                    type="radio"
+                    id="30"
+                    name="share"
+                    value="30"
+                />
+                <label for="30">30%</label>
+            </div>
+            <div class="box">
+                <input type="text" id="txt" name="share" onclick="unCheck()" />
+            </div>
+            <button type="submit" onclick="voila()">Submit</button>
+            <div class="result"><p id="res-txt"></p></div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

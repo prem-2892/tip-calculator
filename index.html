@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tip Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="heading">
+            <p>spli<br />tter</p>
+        </div>
+        <div class="container">
+            <div class="first-container">
+                <div class="bill">
+                    <div class="row">
+                        <p class="title">Bill</p>
+                        <p class="bill-error error" id="bill-error"></p>
+                    </div>
+                    <div class="inp common">
+                        <img src="./images/icon-dollar.svg" alt="" />
+                        <input
+                            type="number"
+                            id="amount"
+                            class="amount"
+                            oninput="calculateTip()"
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="select-tip">
+                    <p class="title">select tip</p>
+                    <div class="flex-container">
+                        <div class="tip-box">
+                            <input
+                                type="radio"
+                                name="tip"
+                                id="5"
+                                class="radio"
+                                value="0.05"
+                                onclick="calculateTip()"
+                                checked
+                            />
+                            <label for="5">5%</label>
+                        </div>
+                        <div class="tip-box">
+                            <input
+                                type="radio"
+                                name="tip"
+                                value="10"
+                                id="10"
+                                class="radio"
+                                onclick="calculateTip()"
+                                value="0.10"
+                            />
+                            <label for="10">10%</label>
+                        </div>
+                        <div class="tip-box">
+                            <input
+                                type="radio"
+                                name="tip"
+                                id="15"
+                                class="radio"
+                                onclick="calculateTip()"
+                                value="0.15"
+                            />
+                            <label for="15">15%</label>
+                        </div>
+                        <div class="tip-box">
+                            <input
+                                type="radio"
+                                name="tip"
+                                id="25"
+                                class="radio"
+                                onclick="calculateTip()"
+                                value="0.25"
+                            />
+                            <label for="25">25%</label>
+                        </div>
+                        <div class="tip-box">
+                            <input
+                                type="radio"
+                                name="tip"
+                                id="50"
+                                class="radio"
+                                value="0.50"
+                                onclick="calculateTip()"
+                            />
+                            <label for="50">50%</label>
+                        </div>
+                        <div class="tip-box">
+                            <input
+                                type="number"
+                                id="custom"
+                                class="custom"
+                                name="tip"
+                                onclick="unCheck()"
+                                placeholder="Custom"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="number">
+                    <div class="row">
+                        <p class="title">number of people</p>
+                        <p class="num-error error" id="num-error"></p>
+                    </div>
+                    <div class="num common">
+                        <img src="./images/icon-person.svg" alt="" />
+                        <input
+                            type="number"
+                            class="number"
+                            id="number"
+                            oninput="calculateTip()"
+                            required
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <div class="res-container">
+                    <div class="element">
+                        <p>Tip Amount</p>
+                        <p class="spn">/ person</p>
+                    </div>
+                    <div class="digits tip-amount" id="tip-amount">$0.00</div>
+                    <div class="element">
+                        <p>Total</p>
+                        <p class="spn">/ person</p>
+                    </div>
+                    <div class="digits total-amount" id="total-amount">
+                        $0.00
+                    </div>
+                </div>
+                <button
+                    type="reset"
+                    class="reset btnDisabled"
+                    id="reset"
+                    onclick="resetValues()"
+                >
+                    reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Javascript included here -->
+        <script src="./script.js"></script>
+    </body>
+</html>

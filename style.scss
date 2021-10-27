@@ -1,0 +1,427 @@
+// Custom made SCSS from scratch
+// Version 0.1 on 25/10/2021
+
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$very-dark-grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Space Mono", sans-serif;
+    background-color: $light-grayish-cyan;
+    height: 100vh;
+    font-size: 24px;
+}
+
+.heading {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: $very-dark-cyan;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: white;
+    height: 100%;
+    width: 400px;
+    margin: auto;
+    border-radius: 15px 15px 0 0;
+    padding: 25px;
+}
+
+p.title,
+p.error {
+    text-transform: capitalize;
+    font-weight: 700;
+    color: $dark-grayish-cyan;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+}
+
+p.error {
+    //text-align: left;
+    color: red;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+// .common {
+//     background-color: $very-light-grayish-cyan;
+//     margin: 10px 0px;
+//     border-radius: 5px;
+// }
+
+.common {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 10px 0px;
+}
+
+.common img {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    inset: 20 20 20 20px;
+}
+
+.common input {
+    float: right;
+    // height: 100%;
+    // size: 100%;
+    background-color: $very-light-grayish-cyan;
+    padding: 5px;
+    padding-left: 85px;
+    margin-right: 20px;
+    margin-top: auto;
+    border: none;
+    color: $very-dark-cyan;
+    font-size: 24px;
+    text-align: right;
+    font-weight: 700;
+    width: 80%;
+    max-width: 300px;
+}
+
+.common input:focus {
+    color: $very-dark-cyan;
+    font-weight: 700;
+    outline-color: $strong-cyan;
+
+    .common {
+        border: 1px $very-dark-cyan solid;
+    }
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 70px;
+    width: 80%;
+}
+
+.flex-container input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.flex-container label {
+    display: inline-block;
+    background-color: $very-dark-cyan;
+    //width: 60%;
+    width: 160px;
+    height: 30px;
+    font-family: sans-serif, Arial;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0px;
+}
+
+.container label:hover {
+    background-color: $light-grayish-cyan;
+    color: $very-dark-cyan;
+    font-weight: 700;
+}
+
+.container input[type="radio"]:checked + label {
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+    font-weight: 700;
+}
+
+label {
+    padding-top: 5px;
+}
+
+.custom {
+    height: 40px;
+    width: 155px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Space Mono", sans-serif;
+    border: none;
+    background-color: $very-light-grayish-cyan;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.custom:focus {
+    outline-color: $strong-cyan;
+    color: $very-dark-cyan;
+}
+
+.number {
+    margin-top: 10px;
+}
+
+.result {
+    background-color: $very-dark-cyan;
+    border-radius: 10px;
+    width: 330px;
+    padding: 25px 30px;
+    color: white;
+}
+
+.res-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    //width: 80%;
+    grid-row-gap: 20px;
+}
+
+.digits {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    color: $strong-cyan;
+}
+
+.element {
+    font-size: 14px;
+    font-weight: 600;
+    color: $very-light-grayish-cyan;
+}
+
+.element .spn {
+    color: $very-dark-grayish-cyan;
+    font-size: 12px;
+}
+
+.number {
+    margin-bottom: 10px;
+}
+
+button {
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+button:hover {
+    //cursor: pointer;
+    background-color: $light-grayish-cyan;
+}
+
+.btnDisabled:hover {
+    background-color: $strong-cyan;
+}
+
+.btnDisabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+@media (min-width: 700px) and (max-width: 920px) {
+    body {
+        padding: 40px;
+    }
+
+    .heading p {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        //grid-column-gap: 20px;
+        width: 90%;
+        border-radius: 15px;
+        margin: auto;
+        padding: 30px;
+    }
+
+    // .first-container {
+    //     max-width: ;
+    // }
+
+    p.error {
+        margin-right: 130px;
+    }
+
+    .flex-container {
+        width: 20%;
+        margin-top: 10px;
+        grid-column-gap: 10px;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .tip-box {
+        max-width: fit-content;
+    }
+
+    .flex-container label {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .common input {
+        width: 60%;
+    }
+
+    .custom {
+        width: 80px;
+        font-size: 14px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .res-container {
+        grid-row-start: auto;
+        grid-row-gap: 10px;
+        margin-top: 20px;
+        // padding-right: 20px;
+        //height: inherit;
+        font-size: 18px;
+    }
+
+    .result {
+        width: auto;
+        height: 280px;
+    }
+
+    .element {
+        height: fit-content;
+    }
+
+    .digits {
+        font-size: 32px;
+    }
+
+    button {
+        margin-top: 100px;
+    }
+
+    .bill {
+        margin-bottom: 20px;
+    }
+
+    .select-tip {
+        margin-top: 20px;
+        //width: 65px;
+    }
+
+    .row {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 920px) {
+    body {
+        padding: 40px;
+        max-width: 100%;
+    }
+
+    .heading p {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        //grid-column-gap: 20px;
+        width: 776px;
+        border-radius: 15px;
+        margin: auto;
+        padding: 30px;
+    }
+
+    // .first-container {
+    //     padding-right: 20px;
+    // }
+
+    p.error {
+        margin-right: 70px;
+        //font-size: 10px;
+    }
+
+    .tip-box {
+        width: fit-content;
+        margin: 0px;
+    }
+
+    .flex-container {
+        width: 50px;
+        margin-top: 10px;
+        grid-column-gap: 10px;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .flex-container label {
+        width: 100px;
+        font-size: 20px;
+    }
+
+    .common input {
+        width: 60%;
+    }
+
+    .custom {
+        width: 100px;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .res-container {
+        grid-row-start: auto;
+        margin-top: 40px;
+        padding-right: 20px;
+        height: inherit;
+        font-size: 18px;
+    }
+
+    .digits {
+        font-size: 32px;
+    }
+
+    button {
+        margin-top: 120px;
+    }
+
+    .bill {
+        margin-bottom: 20px;
+    }
+
+    .select-tip {
+        margin-top: 20px;
+        //width: 65px;
+    }
+
+    .row {
+        margin-bottom: 20px;
+    }
+}
